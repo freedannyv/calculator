@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <form id="form" action="submit">
+      <table>
+        <tbody>
+          <tr>
+            <th>Due Date</th>
+            <th>Upfront</th>
+            <th>Y3</th>
+            <th>Y5</th>
+            <th></th>
+          </tr>
+
+          <tr>
+            <td>Investment Readiness</td>
+            <td><input id="ir-up" type="number" /></td>
+            <td><input id="ir-3" type="number" /></td>
+            <td><input id="ir-5" type="number" /></td>
+          </tr>
+
+          <tr>
+            <td>Subscription Fees</td>
+            <td><input id="sf-up" type="number" /></td>
+            <td><input id="sf-3" type="number" /></td>
+            <td><input id="sf-5" type="number" /></td>
+          </tr>
+          <tr>
+            <td>Legal -- Golden Visa application</td>
+            <td><input id="gv-up" type="number" /></td>
+            <td><input id="gv-3" type="number" /></td>
+            <td><input id="gv-5" type="number" /></td>
+          </tr>
+          <tr>
+            <td>Legal -- First renewal</td>
+            <td><input id="le1-up" type="number" /></td>
+            <td><input id="le1-3" type="number" /></td>
+            <td><input id="le1-5" type="number" /></td>
+          </tr>
+          <tr>
+            <td>Legal -- Second renewal</td>
+            <td><input id="le2-up" type="number" /></td>
+            <td><input id="le2-3" type="number" /></td>
+            <td><input id="le2-5" type="number" /></td>
+          </tr>
+          <tr>
+            <td>Extra family member</td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+          </tr>
+          <tr>
+            <td>Gov. fees -- Initial application</td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+          </tr>
+          <tr>
+            <td>Gov. fees -- First renewal</td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+          </tr>
+          <tr>
+            <td>Gov. fees -- Second renewal</td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+            <td><input id="" type="number" /></td>
+          </tr>
+          <input type="submit" value="Calculate" />
+        </tbody>
+      </table>
+
+      <table>
+        <tr>
+          <th>Total Fees</th>
+          <th>Upfront</th>
+          <th>Y3</th>
+          <th>Y5</th>
+          <th>TOTAL PERIOD</th>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Investment Readiness</td>
+          <td id="calc-ir-up"></td>
+          <td id="calc-ir-3"></td>
+          <td id="calc-ir-5"></td>
+          <td id="calc-ir-total"></td>
+        </tr>
+        <tr>
+          <td>Subscription Fees</td>
+          <td id="calc-sf-up"></td>
+          <td id="calc-sf-3"></td>
+          <td id="calc-sf-5"></td>
+          <td id="calc-sf-total"></td>
+        </tr>
+        <tr>
+          <td>Legal</td>
+          <td id="calc-le-up"></td>
+          <td id="calc-le-3"></td>
+          <td id="calc-le-5"></td>
+          <td id="calc-le-total"></td>
+        </tr>
+      </table>
+    </form>
+
+    <script src="calc.js"></script>
+  </body>
+</html>

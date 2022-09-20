@@ -7,7 +7,9 @@
     <title>Calculator</title>
   </head>
   <body>
+    <h3>COST BASE</h3>
     <form id="form" action="submit">
+      <!-- INPUT TABLE -->
       <table>
         <tbody>
           <tr>
@@ -20,63 +22,82 @@
 
           <tr>
             <td>Investment Readiness</td>
-            <td><input id="ir-up" type="number" /></td>
-            <td><input id="ir-3" type="number" /></td>
-            <td><input id="ir-5" type="number" /></td>
+            <td><input id="ir-up" type="number" value="5000" /></td>
+            <td><input id="ir-3" type="number" value="" /></td>
+            <td><input id="ir-5" type="number" value="" /></td>
           </tr>
 
           <tr>
             <td>Subscription Fees</td>
-            <td><input id="sf-up" type="number" /></td>
-            <td><input id="sf-3" type="number" /></td>
-            <td><input id="sf-5" type="number" /></td>
+            <td><input id="sf-up" type="number" value="2000" /></td>
+            <td><input id="sf-3" type="number" value="" /></td>
+            <td><input id="sf-5" type="number" value="" /></td>
           </tr>
           <tr>
             <td>Legal -- Golden Visa application</td>
-            <td><input id="gv-up" type="number" /></td>
-            <td><input id="gv-3" type="number" /></td>
-            <td><input id="gv-5" type="number" /></td>
+            <td><input id="visa-up" type="number" value="5000" /></td>
+            <td><input id="visa-3" type="number" value="" /></td>
+            <td><input id="visa-5" type="number" value="" /></td>
+            <td>Main applicant + up to 3 family members</td>
           </tr>
           <tr>
             <td>Legal -- First renewal</td>
-            <td><input id="le1-up" type="number" /></td>
-            <td><input id="le1-3" type="number" /></td>
-            <td><input id="le1-5" type="number" /></td>
+            <td><input id="le1-up" type="number" value="" /></td>
+            <td><input id="le1-3" type="number" value="3000" /></td>
+            <td><input id="le1-5" type="number" value="" /></td>
+            <td>Main applicant + up to 3 family members</td>
           </tr>
           <tr>
             <td>Legal -- Second renewal</td>
-            <td><input id="le2-up" type="number" /></td>
-            <td><input id="le2-3" type="number" /></td>
-            <td><input id="le2-5" type="number" /></td>
+            <td><input id="le2-up" type="number" value="" /></td>
+            <td><input id="le2-3" type="number" value="" /></td>
+            <td><input id="le2-5" type="number" value="3000" /></td>
+            <td>Main applicant + up to 3 family members</td>
           </tr>
           <tr>
             <td>Extra family member</td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
+            <td><input id="extra-fam-up" type="number" value="500" /></td>
+            <td><input id="extra-fam-3" type="number" value="500" /></td>
+            <td><input id="extra-fam-5" type="number" value="500" /></td>
+            <td>per extra family member from 5 and up</td>
           </tr>
           <tr>
             <td>Gov. fees -- Initial application</td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
+            <td><input id="gov-initial-up" type="number" value="6000" /></td>
+            <td><input id="gov-initial-3" type="number" /></td>
+            <td><input id="gov-initial-5" type="number" /></td>
+            <td>per applicant</td>
           </tr>
           <tr>
             <td>Gov. fees -- First renewal</td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
+            <td><input id="gov-first-up" type="number" /></td>
+            <td><input id="gov-first-3" type="number" value="3000" /></td>
+            <td><input id="gov-first-5" type="number" /></td>
+            <td>per applicant</td>
           </tr>
           <tr>
             <td>Gov. fees -- Second renewal</td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
-            <td><input id="" type="number" /></td>
+            <td><input id="gov-second-up" type="number" /></td>
+            <td><input id="gov-second-3" type="number" /></td>
+            <td><input id="gov-second-5" type="number" value="3000" /></td>
+            <td>per applicant</td>
           </tr>
-          <input type="submit" value="Calculate" />
         </tbody>
       </table>
 
+      <h3>CALCULATOR</h3>
+      <p>How many additional family members are you applying for?</p>
+      <select name="multiplyer" id="multiplyer">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+
+      <!-- OUTPUT TABLE -->
       <table>
         <tr>
           <th>Total Fees</th>
@@ -88,26 +109,42 @@
         <tr></tr>
         <tr>
           <td>Investment Readiness</td>
-          <td id="calc-ir-up"></td>
-          <td id="calc-ir-3"></td>
-          <td id="calc-ir-5"></td>
-          <td id="calc-ir-total"></td>
+          <td id="output-ir-up"></td>
+          <td id="output-ir-3"></td>
+          <td id="output-ir-5"></td>
+          <td id="output-ir-total"></td>
         </tr>
         <tr>
           <td>Subscription Fees</td>
-          <td id="calc-sf-up"></td>
-          <td id="calc-sf-3"></td>
-          <td id="calc-sf-5"></td>
-          <td id="calc-sf-total"></td>
+          <td id="output-sf-up"></td>
+          <td id="output-sf-3"></td>
+          <td id="output-sf-5"></td>
+          <td id="output-sf-total"></td>
         </tr>
         <tr>
           <td>Legal</td>
-          <td id="calc-le-up"></td>
-          <td id="calc-le-3"></td>
-          <td id="calc-le-5"></td>
-          <td id="calc-le-total"></td>
+          <td id="output-legal-up"></td>
+          <td id="output-legal-3"></td>
+          <td id="output-legal-5"></td>
+          <td id="output-legal-total"></td>
+        </tr>
+        <tr>
+          <td>Government</td>
+          <td id="output-gov-up"></td>
+          <td id="output-gov-3"></td>
+          <td id="output-gov-5"></td>
+          <td id="output-gov-total"></td>
+        </tr>
+        <tr>
+          <th>TOTAL</th>
+          <th id="output-total-up"></th>
+          <th id="output-total-3"></th>
+          <th id="output-total-5"></th>
+          <th id="output-total-total"></th>
         </tr>
       </table>
+      <input type="submit" value="Calculate" />
+      <input type="reset" value="Reset" />
     </form>
 
     <script src="calc.js"></script>

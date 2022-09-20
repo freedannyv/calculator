@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+/* text */
+h3 {
+  margin: 2rem 0;
+}
+.text {
+  padding-left: 0.3rem;
+  font-style: italic;
+}
+.bold {
+  font-weight: 600;
+}
+
+/* table */
+table {
+  margin-bottom: 1rem;
+}
+table {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+tr {
+  text-align: left;
+}
+table.table-input {
+  background-color: rgb(202, 228, 237);
+}
+
+table.table-output {
+  background-color: rgb(223, 223, 223);
+}
+td {
+  padding: 0.3rem 0.2rem;
+}
+
+/* inputs */
+input[type="submit"],
+input[type="reset"] {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+input[type="submit"] {
+  background-color: rgb(189, 237, 221, 0.6);
+}
+input[type="reset"] {
+  background-color: rgb(246, 218, 215, 0.6);
+}
+input[type="submit"]:hover {
+  background-color: rgba(189, 237, 221, 1);
+}
+input[type="reset"]:hover {
+  background-color: rgba(246, 218, 215, 1);
+}
+input[type="number"] {
+  width: 5rem;
+  padding: 0.2rem;
+}
+
+/* select */
+select {
+  margin-left: 1rem;
+  border: 0;
+}
+select:focus,
+input[type="number"]:focus {
+  outline: none;
+}
+option {
+  padding: 0.3rem;
+}
+
+.family-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
